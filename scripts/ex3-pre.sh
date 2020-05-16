@@ -53,7 +53,7 @@ git remote add official https://github.com/jrjang/$GITHUB_PROJECT
 git fetch -q official
 git push -q -f origin official/$PROJECT_BRANCH:refs/heads/$PROJECT_BRANCH
 git push -q -f origin official/$PROJECT_BRANCH-2:refs/heads/$PROJECT_BRANCH-2
-git checkout --detach official/$PROJECT_BRANCH-2
+git checkout official/$PROJECT_BRANCH-2 -b $PROJECT_BRANCH-2
 git stash clear
 echo "[STATUS] Example 3: Github update done"
 popd
